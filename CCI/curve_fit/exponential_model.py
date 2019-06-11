@@ -25,7 +25,7 @@ def main():
     sum_wz = 0
     for i in range(n):
         quad_sum_w = quad_sum_w + W[i]**2
-        sum_wz = sum_wz + W[i]**Z[i]
+        sum_wz = sum_wz + W[i]*Z[i]
     
     #Averege
     w_a = sum_w/n
@@ -57,7 +57,7 @@ def main():
 
     #Cd and r
     Cd = (St - Sr)/St
-    #r = sqrt(Cd)
+    r = sqrt(Cd)
 
     #plots
 
