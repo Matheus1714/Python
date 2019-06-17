@@ -58,6 +58,14 @@ def main():
     #Cd and r
     Cd = (St - Sr)/St
     r = sqrt(Cd)
+    #Prits
+
+    print(f"a0: {a0}")
+    print(f"a1: {a1}")
+    print(f"alpha: {alpha}")
+    print(f"betha: {betha}")
+    print(f"Cd: {Cd}")
+    print(f"r: {r}")
 
     #plots
 

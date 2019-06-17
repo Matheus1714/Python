@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from scipy.integrate import quad
 from numpy import trapz
 
 def f(x):
@@ -6,25 +7,25 @@ def f(x):
 def E(space, inf, sup):
     F=[]
     h = (sup-inf)/space
-    for i in range(space):
+    for i in range(space+1):
         F.append(f(inf+i*h))
     return F
 def main():
     print("trapeze rule")
     a = 0
     b = 1
-    space = 4
+    space = int(input("Segments: "))
     h = (b-a)/space
     y = E(space,a,b)
     Ia = trapz(y,dx=h)
 
-    print(Ia)
-
-    I = int(input("Exact integrate"))
-
+    I, Ea = quad(f, a, b)
     Et = I - Ia
-    
 
+    print(f"I: {I}")
+    print(f"Ia: {Ia}")
+    print(f"Et: {Et}")
+    print(f"Ea: {Ea}")
 
 if __name__=="__main__":
     main()

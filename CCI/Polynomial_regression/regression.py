@@ -64,6 +64,11 @@ def main():
     #Cd terms
     Cd = (St - Sr)/St
 
+    print(f"a0: {a[0]}")
+    print(f"a1: {a[1]}")
+    print(f"a2: {a[2]}")
+    print(f"Cd: {Cd}")
+
     #Plots
     plt.plot( X, Y, 'go') 
     plt.plot( X, Y, 'k:', color='orange') 

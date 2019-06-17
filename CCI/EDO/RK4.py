@@ -9,7 +9,7 @@ def main():
     y0 = 2
     a = 0
     b = 1
-    n = 10
+    n = 200
     h = (b-a)/n
 
     Y = []
@@ -18,6 +18,9 @@ def main():
     X.append(x0)
     y = y0
     x = x0
+
+    print(f"pass: {h}")
+    term = float(input("Input the x value: "))
     for i in range(n):
         k1 = f(x,y)
         k2 = f(x+h/2, y+h*k1/2)
@@ -27,11 +30,11 @@ def main():
         y = y + (h/6)*(k1+2*k2+2*k3+k4)
         Y.append(y)
         X.append(x)
-        if(x == 0.4):
-            print(y)
+        if(x == term):
+            print(f"y({ x }) = {y}")
 
-    plt.plot(X,Y)
-    plt.show()
+    # plt.plot(X,Y)
+    # plt.show()
 
 if __name__ == "__main__":
     main()
